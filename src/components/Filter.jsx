@@ -4,10 +4,10 @@ import React from 'react'
 const Filter = (props) => {
     let filterData=props.filterData;
    let category=props.category;
-   let setcategory=props.setcategory;
+   let setCategory=props.setCategory;
 
    function filterHandler(title){
-    setcategory(title);
+    setCategory(title);
    }
 
   return (

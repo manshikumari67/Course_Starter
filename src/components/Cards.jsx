@@ -5,10 +5,13 @@ import { useState } from 'react';
 const Cards = (props) => {
 
    let courses=props.courses;
+   let category=props.category;
+
 
    const[likedCourses,setLikedCourses]=useState([]);
     
     function getCourses(){
+      if(category === "All"){
          let allCourses=[];
         Object.values(courses).forEach(courseCategory =>{
             courseCategory.forEach(courseData =>{
@@ -16,6 +19,11 @@ const Cards = (props) => {
             })
         })
         return allCourses;
+      }
+      else{
+        return courses[category];
+      }
+        
     }
 
   return (
